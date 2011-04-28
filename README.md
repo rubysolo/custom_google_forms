@@ -78,6 +78,23 @@ For example, for http://forms.mocra.com we used:
 
 Once deployed, go to the /google_forms/new URL and add your first form. Once it is validated and added, you can start using it using the links shown.
 
+# Get It Working with RVM Gemset + Bundler
+
+If you are using Rails 3, you can easily use RVM Gemset to get it to work. 
+
+Firstly, install and configure RVM if you haven't already.
+
+    bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+    rvm install 1.8.7
+    rvm --default use 1.8.7
+    
+Then, install the Bundler gem and do a "bundle install".
+  
+    gem install --no-rdoc --no-ri bundler
+    bundle install
+    
+Done!
+
 # License
 
 Copyright (c) 2010 Dr Nic Williams, Odin Dutton from Mocra
