@@ -6,8 +6,11 @@ class GoogleForm < ActiveRecord::Base
   
   def fetch_form_page
     uri = URI.parse(google_form_url)
-    req = Net::HTTP::Get.new("#{uri.path}?#{uri.query}")
-    response = Net::HTTP.new(uri.host).start {|h| h.request(req)}
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    request = Net::HTTP::Get.new(uri.request_uri)
+    response = http.request(request)
     if response.is_a?(Net::HTTPSuccess)
       self.title = extract_form_title(response.body)
     end
@@ -30,7 +33,7 @@ class GoogleForm < ActiveRecord::Base
   end
   
   def google_form_url
-    "http://spreadsheets.google.com/viewform?formkey=#{formkey}"
+    "https://spreadsheets.google.com/viewform?formkey=#{formkey}"
   end
   
   def extract_form_title(body)
