@@ -26,9 +26,12 @@ class GoogleForm < ActiveRecord::Base
   
   def submit(google_form_action, params)
     uri = URI.parse(google_form_action)
-    req = Net::HTTP::Post.new("#{uri.path}?#{uri.query}")
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    req = Net::HTTP::Post.new(uri.request_uri)
     req.form_data = params
-    response = Net::HTTP.new(uri.host).start {|h| h.request(req)}
+    response = http.request(req)
     response
   end
   
