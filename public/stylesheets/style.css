@@ -22,6 +22,7 @@ a:hover{color:#666;}
 /*-------------------------*
  * Form style -------------*
  *-------------------------*/
+#ss-form br { display: none }
 .ss-form-container{margin:0 auto;padding:30px 29px;}
 
 label{font-weight:bold;color:#880909;display:block;}
@@ -30,14 +31,15 @@ label{font-weight:bold;color:#880909;display:block;}
 .ss-required-asterisk{display:inline; color:red;}
 
 
-.ss-item{margin-bottom:5px;}
+.ss-item{margin-bottom:1px;}
 
 /*.ss-text{float:left;}*/
 
 .ss-item.ss-text input{background:white;height:20px;font-size:14px;border:1px solid #737373;width:300px;}
 
 /* Textarea */
-.ss-paragraph-text textarea{background:white;border:1px solid #333;width:758px;height:100px;}
+.ss-paragraph-text label{vertical-align: top; padding-top: 5px}
+.ss-paragraph-text textarea{background:white;border:1px solid #333;width:300px;height:50px;}
 
 
 /* Highlighted */
