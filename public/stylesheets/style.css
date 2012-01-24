@@ -1,6 +1,5 @@
 /* Main typographic styles */
 body{font:normal 12px/100% Helvetica,Arial,sans-serif;color:#333;}
-p{margin:10px 0 20px;}
 strong{font-weight:bold;}
 code{font-family:'Courier New',Courier,Fixed;}
 acronym,abbr,span.caps{cursor:help;}
@@ -8,7 +7,7 @@ acronym,abbr{border-bottom:1px dashed #999;}
 acronym{font-variant:small-caps;}
 em{font-style:italic;}
 small{font-size:0.8em;}
-h1{font-size:20px;height:16px;margin-bottom:15px;}
+h1{font-size:20px;height:16px;margin-bottom:0px;}
 h2{font-size:30px;font-weight:bold;color:#880909;margin-bottom:10px;}
 hr{display:none;}
 /* Links */
@@ -39,7 +38,7 @@ label{font-weight:bold;color:#880909;display:block;}
 
 /* Textarea */
 .ss-paragraph-text label{vertical-align: top; padding-top: 5px}
-.ss-paragraph-text textarea{background:white;border:1px solid #333;width:300px;height:50px;}
+.ss-paragraph-text textarea{background:white;border:1px solid #333;width:300px;height:30px;}
 
 
 /* Highlighted */
