@@ -1,5 +1,6 @@
 /* Main typographic styles */
 body{font:normal 12px/100% Helvetica,Arial,sans-serif;color:#333;}
+body img{display:none;}
 strong{font-weight:bold;}
 code{font-family:'Courier New',Courier,Fixed;}
 acronym,abbr,span.caps{cursor:help;}
