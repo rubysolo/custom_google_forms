@@ -21,6 +21,7 @@
             %td
               = link_to "Live", "/#{form.slug}"
               = link_to "Edit", edit_google_form_path(form)
+              = link_to "Delete", form, :method => :delete, :confirm => 'Are you sure?'
       - else
         %tr
           %td{:colspan => 4} No forms yet.
